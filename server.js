@@ -20,7 +20,7 @@ mongoose.connect(connection_url, {
 });
 
 //API Endpoints
-app.get('/', (req, res) => res.status(200).send("Node Server Started"));
+app.get('/', (req, res) => res.status(200).send("Hello World"));
 
 app.post('/tinder/cards', (req, res) => {
     const dbCard = req.body;
@@ -45,5 +45,5 @@ app.get('/tinder/cards', (req, res) => {
 })
 
 //Listener
-app.listen(port, () => console.log(`listening on localhost: ${port}`));
+app.listen(port, () => console.log(`server listening on port: ${port}`));
 
